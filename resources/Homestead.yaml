@@ -10,15 +10,15 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/Code
-      to: /home/vagrant/Code
+    - map: ./backend
+      to: /home/vagrant/Code/backend
 
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
+    - map: backend.app
+      to: /home/vagrant/Code/backend/public
 
 databases:
-    - homestead
+    - backend
 
 # blackfire:
 #     - id: foo

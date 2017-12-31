@@ -263,6 +263,11 @@ class Homestead
             end
         end
 
+        # Setup anything extra for the project
+        config.vm.provision "shell" do |s|
+            s.path = scriptDir + "/serve-backend.sh"
+        end
+
         # Configure All Of The Server Environment Variables
         config.vm.provision "shell" do |s|
             s.name = "Clear Variables"

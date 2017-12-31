@@ -1,16 +1,16 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-homestead.svg"></p>
+#Homestead Box
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/homestead"><img src="https://travis-ci.org/laravel/homestead.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/homestead"><img src="https://poser.pugx.org/laravel/homestead/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/homestead"><img src="https://poser.pugx.org/laravel/homestead/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/homestead"><img src="https://poser.pugx.org/laravel/homestead/license.svg" alt="License"></a>
-</p>
+This homestead box is for personal use and to set up the backend environment for my personal websites.
 
-## Introduction
+##Starting up
 
-Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to install PHP, a web server, and any other server software on your local machine. No more worrying about messing up your operating system! Vagrant boxes are completely disposable. If something goes wrong, you can destroy and re-create the box in minutes!
+```
+git clone https://github.com/debanks/personal-box.git
+cd personal-box
+./init.sh
+git clone https://github.com/debanks/backend.git
+vagrant up
+```
 
-Homestead runs on any Windows, Mac, or Linux system, and includes the Nginx web server, PHP 7.1, MySQL, Postgres, Redis, Memcached, Node, and all of the other goodies you need to develop amazing Laravel applications.
-
-Official documentation [is located here](http://laravel.com/docs/homestead).
+Once the box is up you can run `vagrant ssh` to enter the environment and the
+backend folder should be at `/var/www/backend`
